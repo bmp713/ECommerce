@@ -1,0 +1,58 @@
+/* position: absolute and 100% height fills veritcally but loses horizontal centering.
+   vh centers vertically ONLY to the viewport.
+   height % centers relative to parent */
+*{ margin: 0; border: 0; padding: 0; box-sizing: border-box; }
+a{ cursor: pointer; text-decoration: none; }
+
+#content{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    /* 1vh = 10% viewport height. */
+    height: 100vh;
+    text-align: center;
+    font: 20px helvetica;
+    background: url("assets/images/laptop (6).jpg") no-repeat;
+    background-size: cover;
+}
+    /* Height percentage works only if parent is specific height */
+    #content_1{
+        padding: 100px;
+        position: relative;
+        height: 75%;
+        width: 80%;
+        /* Vertical and horizontal centering with transform */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: white;
+        background: rgba(1, 20, 20, 0.8);
+        transition: background 1s, box-shadow 1s;        
+    }
+    #content_1:hover{
+        transition: background 1s, box-shadow 1s;        
+        background: rgba(1, 20, 20, 0.6);
+        box-shadow: 10px 10px 20px black;
+    }
+        .login{
+            width: 300px;
+            height: 30px;
+            color: white;
+            font: 20px helvetica;
+            background: rgba(100, 100, 100, 1);
+        }
+        .login:hover{
+            background: rgba(100, 100, 100, 0.7);
+        }
+        .login_button{
+            cursor: pointer;
+            width: 150px;
+            height: 30px;
+            color: white;
+            font: 20px helvetica;
+            background: rgba(100, 100, 100, 1);
+        }
+
+
+
